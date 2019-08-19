@@ -2,14 +2,13 @@
 # Warning: this file was auto generated from OpenAPI specs using 'npm run sync-generated-specs'. Do not manually edit. 
 ###
 type: object
-description: 'Bancontact Source'
+description: 'P24 Source'
 allOf:
   -
     $ref: '#/components/schemas/PaymentResponseSource'
   -
     type: object
     properties:
-      iban:
-        maxLength: 34
+      p24_descriptor:
         type: string
-        description: "The IBAN of the Consumer Bank account used for payment (if applicable).\n"
+        description: 'P24 generated payment descriptor, which will contain requested billing descriptor or merchant''s default descriptor  (subject to truncation).'

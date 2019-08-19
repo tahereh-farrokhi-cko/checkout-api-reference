@@ -22,13 +22,16 @@ allOf:
         description: The two-digit expiry month
         minimum: 1
         example: 6
+        maxLength: 2
       expiry_year:
         type: integer
         description: The four-digit expiry year
         example: 2025
+        minLength: 4
+        maxLength: 4
       name:
         type: string
-        description: The card-holder name
+        description: The cardholder's name
         example: "Bruce Wayne"
       scheme:
         type: string
@@ -38,10 +41,13 @@ allOf:
         type: string
         description: The last four digits of the card number
         example: "9996"
+        minLength: 4
+        maxLength: 4
       bin:
         type: string
-        description: The card issuer BIN
+        description: The card issuer's BIN
         example: "454347"
+        maxLength: 4
       card_type:
         type: string
         description: The card type
@@ -65,7 +71,7 @@ allOf:
         type: string
         maxLength: 2
         minLength: 2
-        description: The card issuer country ISO-2 code
+        description: The card issuer's country (<a href="https://docs.checkout.com/docs/country-codes" target="blank">two-letter ISO code</a>)
         example: "US"
       product_id:
         type: string

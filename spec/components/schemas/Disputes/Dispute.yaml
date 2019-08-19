@@ -2,12 +2,13 @@ type: object
 properties:
   id:
     type: string
+    pattern: "^(dsp)_(\\w{22})$"
     description: The dispute identifier. This is the same as the payment action ID
     example: "dsp_rbhwd2qrg13uhrp2newf"
   category:
     type: string
-    description: The reason for the dispute
-    enum: [fraudulent, unrecognized, canceled_recurring, product_service_not_received, not_as_described, credit_not_issued, duplicate, incorrect_amount, general, general_restricted]
+    description: The reason for the dispute. [Find out more](https://docs.checkout.com/docs/disputes#section-dispute-reasons-and-recommended-evidence)
+    enum: [fraudulent, unrecognized, canceled_recurring, product_service_not_received, not_as_described, credit_not_issued, duplicate, incorrect_amount, general]
     example: "fraudulent"
   amount:
     type: number
@@ -53,7 +54,7 @@ properties:
       id:
         type: string
         description: The payment identifier
-        example: 'pay_C8DAAE073P1E4B5B8A4A'
+        example: "pay_88cb4e671m1da22e9bbbyx"
       amount:
         type: number
         description: The amount that is being disputed, in the processing currency
@@ -61,15 +62,15 @@ properties:
       currency:
         type: string
         description: The payment currency
-        example: 'GBP'
+        example: "GBP"
       method:
         type: string
         description: The payment method used
-        example: 'Visa'
+        example: "Visa"
       arn:
         type: string
         description: The acquirer reference number (ARN)
-        example: 'AA246873253573571073808'
+        example: "AA246873253573571073808"
       processed_on:
         type: string
         format: ISO-8601
