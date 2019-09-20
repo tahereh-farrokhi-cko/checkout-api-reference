@@ -23,11 +23,11 @@ allOf:
         example: 2025
       name:
         type: string
-        description: The card-holder name
+        description: The cardholder's name
         example: "Bruce Wayne"
       cvv:
         type: string
-        description: The card verification value/code. 3 digits, except for Amex (4 digits).
+        description: The card verification value/code. 3 digits, except for Amex (4 digits)
         example: "956"
         minLength: 3
         maxLength: 4
