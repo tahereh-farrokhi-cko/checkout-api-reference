@@ -1,0 +1,18 @@
+type: object
+description: >
+    The recurring information  <br/>
+    Required if type is `recurring_transaction` or `instalment_transaction`
+properties:
+  frequency:
+    type: integer
+    description: "Indicates the minimum number of days between authorizations."
+    maximum: 9999
+    minimum: 1
+    example: 6
+  expiry_date:
+    type: string
+    description: "Date after which no further authorizations shall be performed."
+    minLength: 8
+    maxLength: 8
+    format: YYYYMMDD
+    example: "20180131"

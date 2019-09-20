@@ -1,0 +1,10 @@
+allOf:
+  - $ref: '#/components/schemas/get-authentication-links'
+    properties:
+      challenge:
+        type: object
+        description: A link to the Challenge (if required)
+        properties:
+          href:
+            type: string
+            example: http://hsbc.com/acs/challenges/y3oqhf46pyzuxjbcn2giaqnb44

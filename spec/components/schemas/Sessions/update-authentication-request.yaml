@@ -1,0 +1,22 @@
+description: The update authentication request
+properties:
+  amount:
+    $ref: '#/components/schemas/amount'
+  currency:
+    $ref: '#/components/schemas/currency'
+  type:
+    $ref: '#/components/schemas/type'
+  category:
+    $ref: '#/components/schemas/category'
+  scheme_token:
+    $ref: '#/components/schemas/scheme_token'
+  card:
+    $ref: '#/components/schemas/card'
+  cardholder:
+    $ref: '#/components/schemas/cardholder'
+  shipping_address:
+    $ref: '#/components/schemas/address'
+  recurring:
+    $ref: '#/components/schemas/recurring'
+  channel_information:
+    $ref: '#/components/schemas/channel-information'

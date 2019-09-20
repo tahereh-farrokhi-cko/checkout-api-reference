@@ -1,0 +1,32 @@
+type: object
+required:
+  - amount
+  - currency
+  - card
+properties:
+  amount:
+    $ref: '#/components/schemas/amount'
+  currency:
+    $ref: '#/components/schemas/currency'
+  type:
+    $ref: '#/components/schemas/type'
+  category:
+    $ref: '#/components/schemas/category'
+  scheme_token:
+    $ref: '#/components/schemas/scheme_token'
+  card:
+    $ref: '#/components/schemas/card'
+  cardholder:
+    $ref: '#/components/schemas/cardholder'
+  shipping_address:
+    $ref: '#/components/schemas/address'
+  recurring:
+    $ref: '#/components/schemas/recurring'
+  challenge_indicator:
+    $ref: '#/components/schemas/challenge_indicator'
+  transaction_type:
+    $ref: '#/components/schemas/transaction_type'
+  redirect_url:
+    $ref: '#/components/schemas/redirect_url'
+  channel_information:
+    $ref: '#/components/schemas/channel-information'

@@ -1,0 +1,35 @@
+type: object
+required:
+  - currency
+  - source
+properties:
+  source:
+    $ref: '#/components/schemas/CardRequestSource'
+  type:
+    $ref: '#/components/schemas/type'
+  category:
+    $ref: '#/components/schemas/category'
+  amount:
+    type: integer
+    description: |
+      The payment amount in the major currency.
+      Omitting the amount or providing 0 will perform a card verification.
+    minimum: 0
+    example: 6540
+  currency:
+    type: string
+    description: |
+      The three-letter ISO currency code
+    example: USD
+    maxLength: 3
+    minLength: 3
+  shipping_address:
+    $ref: '#/components/schemas/address'
+  challenge_indicator:
+    $ref: '#/components/schemas/challenge_indicator'
+  transaction_type:
+    $ref: '#/components/schemas/transaction_type'
+  redirect_url:
+    $ref: '#/components/schemas/redirect_url'
+  channel_information:
+    $ref: '#/components/schemas/channel-information'

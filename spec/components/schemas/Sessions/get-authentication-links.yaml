@@ -1,0 +1,11 @@
+type: object
+description: The links related to the authentication
+properties:
+  self:
+    type: object
+    description: A link to the Authentication
+    properties:
+      href:
+        type: string
+        description: The URI of the authentication
+        example: http://api-internal.checkout.com/authentications/3ds_y3oqhf46pyzuxjbcn2giaqnb441

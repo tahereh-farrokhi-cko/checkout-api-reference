@@ -1,0 +1,35 @@
+post:
+  tags:
+    - Sessions
+  summary: Request a session
+  description: |
+    The payment session is used to authenticate a cardholder before requesting the payment
+    Payment sessions are linked to one or more payments (in case of MIT).
+
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: '#/components/schemas/SessionRequest'
+  responses:
+    '201':
+      description: Payment source added successfully
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/AddSourceResponse'
+      headers:
+        Cko-Request-Id:
+          $ref: "#/components/headers/Cko-Request-Id"
+        Cko-Version:
+          $ref: "#/components/headers/Cko-Version"
+    '401':
+      description: Unauthorized
+    '422':
+      description: Invalid data was sent
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ValidationError'
+    '502':
+      description: Bad gateway
