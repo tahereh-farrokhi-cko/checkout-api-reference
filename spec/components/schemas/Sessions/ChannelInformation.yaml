@@ -4,8 +4,8 @@ description: The information gathered from the environment used to initiate the 
 discriminator:
   propertyName: channel
   mapping:
-    browser: '#/components/schemas/browser'
-    app: '#/components/schemas/app'
+    browser: '#/components/schemas/Browser'
+    app: '#/components/schemas/App'
 properties:
   channel:
     type: string

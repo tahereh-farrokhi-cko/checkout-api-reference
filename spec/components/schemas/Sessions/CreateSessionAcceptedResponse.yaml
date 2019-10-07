@@ -1,0 +1,29 @@
+properties:
+  id:
+    $ref: '#/components/schemas/3dsId'
+  amount:
+    $ref: '#/components/schemas/Amount'
+  currency:
+    $ref: '#/components/schemas/Currency'
+  type:
+    $ref: '#/components/schemas/Type'
+  category:
+    $ref: '#/components/schemas/Category'
+  status:
+    $ref: '#/components/schemas/Status'
+  approved:
+    $ref: '#/components/schemas/Approved'
+  card:
+    $ref: '#/components/schemas/Card'
+  cardholder:
+    $ref: '#/components/schemas/Cardholder'
+  shipping_address:
+    $ref: '#/components/schemas/Address'
+  challenge_indicator:
+    $ref: '#/components/schemas/ChallengeIndicator'
+  transaction_type:
+    $ref: '#/components/schemas/TransactionType'
+  protocol_version:
+    $ref: '#/components/schemas/ProtocolVersion'
+  _links:
+    $ref: '#/components/schemas/CreateSessionLinks'

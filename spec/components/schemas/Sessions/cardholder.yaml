@@ -13,4 +13,4 @@ properties:
     maxLength: 254
     example: "example@example.com"
   billing_address:
-    $ref: '#/components/schemas/address'
+    $ref: '#/components/schemas/Address'

@@ -1,5 +1,5 @@
 allOf:
-  - $ref: '#/components/schemas/channel-information'
+  - $ref: '#/components/schemas/ChannelInformation'
   - type: object
     required:
       - 3ds_method_completion

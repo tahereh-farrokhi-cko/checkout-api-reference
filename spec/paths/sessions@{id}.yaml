@@ -1,34 +1,17 @@
-post:
+get:
   tags:
     - Sessions
-  summary: Request a session
+  summary: Get session details
   description: |
     The payment session is used to authenticate a cardholder before requesting the payment
     Payment sessions are linked to one or more payments (in case of MIT).
-
-  requestBody:
-    content:
-      application/json:
-        schema:
-          $ref: '#/components/schemas/SessionRequest'
   responses:
-    '201':
-      description: Session created successfully
+    '200':
+      description: Session retrieved successfully
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/CreateSessionOkResponse'
-      headers:
-        Cko-Request-Id:
-          $ref: "#/components/headers/Cko-Request-Id"
-        Cko-Version:
-          $ref: "#/components/headers/Cko-Version"
-    '202':
-      description: Session accepted successfully
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/CreateSessionAcceptedResponse'
+            $ref: '#/components/schemas/GetSessionResponse'
       headers:
         Cko-Request-Id:
           $ref: "#/components/headers/Cko-Request-Id"

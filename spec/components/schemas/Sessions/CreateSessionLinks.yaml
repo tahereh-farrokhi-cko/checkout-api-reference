@@ -1,5 +1,5 @@
 allOf:
-  - $ref: '#/components/schemas/get-authentication-links'
+  - $ref: '#/components/schemas/GetSessionLinks'
 properties:
   3ds_method:
     type: object
