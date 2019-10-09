@@ -3,7 +3,7 @@ post:
     - Sessions
   summary: Request a session
   description: |
-    A payment session is used to authenticate a cardholder before requesting the payment
+    A payment session is used to authenticate a cardholder before requesting a payment.
     Payment sessions are linked to one or more payments (in case of Merchant-initiated payments).
 
     - Identifies and aggregates payment, device and cardholder data in one place

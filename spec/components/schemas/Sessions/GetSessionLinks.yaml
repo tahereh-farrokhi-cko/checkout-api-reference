@@ -1,11 +1,11 @@
 type: object
-description: The links related to the authentication
+description: The links related to the session
 properties:
   self:
     type: object
-    description: A link to the Authentication
+    description: A link to the session
     properties:
       href:
         type: string
-        description: The URI of the authentication
-        example: http://api-internal.checkout.com/authentications/3ds_y3oqhf46pyzuxjbcn2giaqnb441
+        description: The URI of the session
+        example: https://api.checkout.com/sessions/sid_y3oqhf46pyzuxjbcn2giaqnb441

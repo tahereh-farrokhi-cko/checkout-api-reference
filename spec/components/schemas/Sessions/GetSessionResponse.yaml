@@ -11,6 +11,8 @@ properties:
     $ref: '#/components/schemas/Approved'
   protocol_version:
     $ref: '#/components/schemas/ProtocolVersion'
+  next_action:
+    $ref: '#/components/schemas/NextAction'
   ds:
     $ref: '#/components/schemas/Ds'
   acs:

@@ -2,4 +2,4 @@ description: Universally unique transaction identifier assigned by the 3DS Serve
 type: string
 minLength: 36
 maxLength: 36
-example: 3ds_y3oqhf46pyzuxjbcn2giaqnb441
+example: sid_y3oqhf46pyzuxjbcn2giaqnb441
