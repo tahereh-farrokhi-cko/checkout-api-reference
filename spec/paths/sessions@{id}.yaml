@@ -3,8 +3,7 @@ get:
     - Sessions
   summary: Get session details
   description: |
-    The payment session is used to authenticate a cardholder before requesting the payment
-    Payment sessions are linked to one or more payments (in case of MIT).
+    Returns the details of the session with the specified identifier string.
   responses:
     '200':
       description: Session retrieved successfully

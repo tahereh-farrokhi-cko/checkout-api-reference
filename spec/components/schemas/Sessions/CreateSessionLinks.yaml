@@ -1,16 +1,11 @@
 allOf:
   - $ref: '#/components/schemas/GetSessionLinks'
 properties:
-  3ds_method:
-    type: object
-    description: A link to the 3DS Method (if available)
-    properties:
-      href:
-        type: string
-        example: http://visa.com/ds/3ds-method/y3oqhf46pyzuxjbcn2giaqnb44
   redirect:
     type: object
-    description: The link where the cardholder should be redirected to
+    description: > 
+      The link where the cardholder should be redirected to. </br>
+      Only available when `hosted` value is `true`.
     properties:
       href:
         type: string

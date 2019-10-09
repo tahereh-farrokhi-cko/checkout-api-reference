@@ -1,5 +1,5 @@
 allOf:
-  - $ref: '#/components/schemas/ChannelInformation'
+  - $ref: '#/components/schemas/ChannelData'
   - type: object
     required:
       - sdk_app_id

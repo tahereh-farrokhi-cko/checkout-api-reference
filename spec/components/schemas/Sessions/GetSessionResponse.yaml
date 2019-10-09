@@ -5,24 +5,16 @@ properties:
     $ref: '#/components/schemas/Amount'
   currency:
     $ref: '#/components/schemas/Currency'
-  type:
-    $ref: '#/components/schemas/Type'
-  category:
-    $ref: '#/components/schemas/Category'
   status:
     $ref: '#/components/schemas/Status'
   approved:
     $ref: '#/components/schemas/Approved'
-  card:
-    $ref: '#/components/schemas/Card'
-  cardholder:
-    $ref: '#/components/schemas/Cardholder'
-  shipping_address:
-    $ref: '#/components/schemas/Address'
-  challenge_indicator:
-    $ref: '#/components/schemas/ChallengeIndicator'
-  transaction_type:
-    $ref: '#/components/schemas/TransactionType'
+  protocol_version:
+    $ref: '#/components/schemas/ProtocolVersion'
+  ds:
+    $ref: '#/components/schemas/Ds'
+  acs:
+    $ref: '#/components/schemas/Acs'
   response_code:
     $ref: '#/components/schemas/ResponseCode'
   response_reason:
@@ -31,13 +23,5 @@ properties:
     $ref: '#/components/schemas/AuthenticationValue'
   eci:
     $ref: '#/components/schemas/Eci'
-  ds:
-    $ref: '#/components/schemas/Ds'
-  acs:
-    $ref: '#/components/schemas/Acs'
-  channel_information:
-    $ref: '#/components/schemas/ChannelInformation'
-  protocol_version:
-    $ref: '#/components/schemas/ProtocolVersion'
   _links:
     $ref: '#/components/schemas/GetSessionLinks'

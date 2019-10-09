@@ -36,15 +36,10 @@ properties:
       When this value is `true` the response will include a `redirect` link.
     default: true
     example: true
-  success_url:
+  redirect_url:
     type: string
     format: uri
-    description: For `hosted` sessions, this overrides the default success redirect URL configured on your account
-    example: "http://example.com/payments/success"
-  failure_url:
-    type: string
-    format: uri
-    description: For `hosted` sessions, this overrides the default failure redirect URL configured on your account
-    example: "http://example.com/payments/fail"
-  channel_information:
-    $ref: '#/components/schemas/ChannelInformation'
+    description: For `hosted` sessions, this overrides the default success/failure redirect URL configured on your account
+    example: "http://example.com/payments/complete"
+  channel_data:
+    $ref: '#/components/schemas/ChannelData'

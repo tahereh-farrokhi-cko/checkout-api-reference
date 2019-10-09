@@ -1,6 +1,6 @@
 required:
   - channel
-description: The information gathered from the environment used to initiate the transation
+description: The information gathered from the environment used to initiate the session
 discriminator:
   propertyName: channel
   mapping:
