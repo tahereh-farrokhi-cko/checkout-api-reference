@@ -23,6 +23,7 @@ discriminator:
     fawry: '#/components/schemas/PaymentRequestFawrySource'
     qpay: '#/components/schemas/PaymentRequestQPaySource'
     session: '#/components/schemas/PaymentRequestSessionSource'
+    multibanco: '#/components/schemas/PaymentRequestMultibancoSource'
 required:
   - type
 properties:
