@@ -32,6 +32,11 @@ properties:
     type: string
     format: uri
     description: For `hosted` sessions, this overrides the default success/failure redirect URL configured on your account
-    example: "http://example.com/payments/complete"
+    example: "http://example.com/payments/redirect/pay_mbabizu24mvu3mela5njyhpit4"
+  callback_url:
+    type: string
+    format: uri
+    description: For `non-hosted` sessions, you can define a url to be called once the session is complete
+    example: "http://example.com/payments/callback/pay_mbabizu24mvu3mela5njyhpit4"
   channel_data:
     $ref: '#/components/schemas/ChannelData'
