@@ -40,7 +40,7 @@ put:
     - Payments
   summary: Update payment details
   description: |
-    Returns the details of the payment with the specified identifier string.
+    Updates the details of the payment with the specified identifier string.
     Currently only the `amount` can be updated for pending 3DS payments.
   parameters:
     - in: path
