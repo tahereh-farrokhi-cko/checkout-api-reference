@@ -1,6 +1,12 @@
 properties:
   id:
     $ref: '#/components/schemas/SessionId'
+  transaction_id:
+    description: Universally unique transaction identifier
+    type: string
+    minLength: 36
+    maxLength: 36
+    example: 9aea641d-0549-4222-9ca9-d90b43a4f38c
   amount:
     $ref: '#/components/schemas/Amount'
   currency:
