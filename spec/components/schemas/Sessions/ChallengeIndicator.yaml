@@ -4,6 +4,6 @@ enum:
   - no_challenge_requested
   - challenge_requested
   - challenge_requested_mandate
-description: Indicates whether a challenge is requested for this transaction.
+description: Indicates whether a challenge is requested for this session.
 example: no_preference
 default: no_preference

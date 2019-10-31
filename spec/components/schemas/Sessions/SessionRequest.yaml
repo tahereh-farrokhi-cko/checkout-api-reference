@@ -19,6 +19,8 @@ properties:
     example: USD
     maxLength: 3
     minLength: 3
+  challenge_indicator:
+    $ref: '#/components/schemas/ChallengeIndicator'
   reference:
     $ref: '#/components/schemas/Reference'
   hosted:
@@ -28,11 +30,16 @@ properties:
       When this value is `true` the response will include a `redirect` link.
     default: true
     example: true
-  redirect_url:
+  success_url:
     type: string
     format: uri
-    description: For `hosted` sessions, this overrides the default success/failure redirect URL configured on your account
-    example: "http://example.com/payments/redirect/pay_mbabizu24mvu3mela5njyhpit4"
+    description: For `hosted` sessions, this overrides the default success redirect URL configured on your account
+    example: "http://example.com/payments/success"
+  failure_url:
+    type: string
+    format: uri
+    description: For `hosted` sessions, this overrides the default failure redirect URL configured on your account
+    example: "http://example.com/payments/fail"
   callback_url:
     type: string
     format: uri

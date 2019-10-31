@@ -13,6 +13,7 @@ properties:
     type: boolean
     description: >
       Whether the payment session should be completed and authorised/captured by Checkout.com automatically.</br>
+      Only valid when the session is created through the Payments API.
       When using this feature you should consume <a href="https://docs.checkout.com/docs/webhooks" target="blank">webhooks</a>.
     example: true
   protocol_version:
