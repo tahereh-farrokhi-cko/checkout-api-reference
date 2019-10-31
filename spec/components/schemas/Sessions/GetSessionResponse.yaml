@@ -30,8 +30,8 @@ properties:
     $ref: '#/components/schemas/ResponseCode'
   response_reason:
     $ref: '#/components/schemas/ResponseReason'
-  authentication_value:
-    $ref: '#/components/schemas/AuthenticationValue'
+  cryptogram:
+    $ref: '#/components/schemas/Cryptogram'
   eci:
     $ref: '#/components/schemas/Eci'
   _links:
