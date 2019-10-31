@@ -65,7 +65,7 @@ put:
               example: 6540
   responses:
     '200':
-      description: Payment retrieved successfully
+      description: Payment updated successfully
       content:
         application/json:
           schema:
