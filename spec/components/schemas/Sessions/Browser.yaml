@@ -2,7 +2,6 @@ allOf:
   - $ref: '#/components/schemas/ChannelData'
   - type: object
     required:
-      - 3ds_method_completion
       - accept_header
       - java_enabled
       - language
@@ -28,6 +27,7 @@ allOf:
           - Y
           - N
           - U
+        default: U  
       accept_header:
         type: string
         maxLength: 2048
