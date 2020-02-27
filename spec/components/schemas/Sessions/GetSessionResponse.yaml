@@ -11,6 +11,10 @@ properties:
     $ref: '#/components/schemas/Amount'
   currency:
     $ref: '#/components/schemas/Currency'
+  completed:
+    type: bool
+    description: Indicates whether this session has been completed
+    example: false
   status:
     $ref: '#/components/schemas/Status'
   approved:

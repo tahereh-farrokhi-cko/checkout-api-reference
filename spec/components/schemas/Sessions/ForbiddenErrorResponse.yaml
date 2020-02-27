@@ -14,4 +14,4 @@ properties:
     items:
       type: string
       enum:
-        - card_not_enrolled
+        - update_not_allowed_due_to_state

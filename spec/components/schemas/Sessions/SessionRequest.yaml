@@ -2,9 +2,10 @@ type: object
 required:
   - currency
   - source
+  - completion
 properties:
   source:
-    $ref: '#/components/schemas/CardRequestSource'
+    $ref: '#/components/schemas/CardSessionSource'
   amount:
     type: integer
     description: |
@@ -12,6 +13,7 @@ properties:
       Omitting the amount or providing 0 will perform a card verification.
     minimum: 0
     example: 6540
+    required: true
   currency:
     type: string
     description: |
@@ -19,31 +21,17 @@ properties:
     example: USD
     maxLength: 3
     minLength: 3
+  authentication_type:
+    $ref: '#/components/schemas/AuthenticationType'
+  authentication_category:
+    $ref: '#/components/schemas/Category'
   challenge_indicator:
     $ref: '#/components/schemas/ChallengeIndicator'
   reference:
     $ref: '#/components/schemas/Reference'
-  hosted:
-    type: boolean
-    description: > 
-      Whether the session should be hosted by Checkout.com</br>
-      When this value is `true` the response will include a `redirect` link.
-    default: true
-    example: true
-  success_url:
-    type: string
-    format: uri
-    description: For `hosted` sessions, this overrides the default success redirect URL configured on your account
-    example: "http://example.com/payments/success"
-  failure_url:
-    type: string
-    format: uri
-    description: For `hosted` sessions, this overrides the default failure redirect URL configured on your account
-    example: "http://example.com/payments/fail"
-  callback_url:
-    type: string
-    format: uri
-    description: For `non-hosted` sessions, you can define a url to be called once the session is complete
-    example: "http://example.com/payments/callback/pay_mbabizu24mvu3mela5njyhpit4"
+  transaction_type:
+      $ref: '#/components/schemas/TransactionType'
+  completion:
+    $ref: '#/components/schemas/CompletionInfo'
   channel_data:
     $ref: '#/components/schemas/ChannelData'
