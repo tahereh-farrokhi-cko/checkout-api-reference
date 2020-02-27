@@ -13,7 +13,6 @@ properties:
       Omitting the amount or providing 0 will perform a card verification.
     minimum: 0
     example: 6540
-    required: true
   currency:
     type: string
     description: |
