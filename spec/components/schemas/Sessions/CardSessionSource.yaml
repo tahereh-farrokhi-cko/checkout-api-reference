@@ -3,6 +3,7 @@ description: The source of the payment
 discriminator:
   propertyName: type
   mapping:
+    token: '#/components/schemas/01_PaymentRequestTokenSource'
     card: '#/components/schemas/03_PaymentRequestCardSource'
 required:
   - type

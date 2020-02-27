@@ -30,8 +30,8 @@ properties:
     $ref: '#/components/schemas/ProtocolVersion'
   reference:
     $ref: '#/components/schemas/Reference'
-  next_action:
-    $ref: '#/components/schemas/NextAction'
+  next_actions:
+    $ref: '#/components/schemas/NextActions'
   ds:
     $ref: '#/components/schemas/Ds'
   acs:

@@ -7,8 +7,8 @@ properties:
     $ref: '#/components/schemas/Currency'
   status:
     $ref: '#/components/schemas/Status'
-  next_action:
-    $ref: '#/components/schemas/NextAction'
+  next_actions:
+    $ref: '#/components/schemas/NextActions'
   protocol_version:
     $ref: '#/components/schemas/ProtocolVersion'
   reference:

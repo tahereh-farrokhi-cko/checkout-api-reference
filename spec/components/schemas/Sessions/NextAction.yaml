@@ -1,5 +1,0 @@
-description: When present, it identifies what actions to take in order to complete the session.
-enum:
-  - collect_channel_data
-  - issuer_fingerprint
-  - challenge_cardholder
