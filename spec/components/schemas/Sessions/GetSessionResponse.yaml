@@ -15,6 +15,10 @@ properties:
     type: bool
     description: Indicates whether this session has been completed
     example: false
+  authentication_type:
+    $ref: '#/components/schemas/AuthenticationType'
+  authentication_category:
+    $ref: '#/components/schemas/Category'
   status:
     $ref: '#/components/schemas/Status'
   approved:
