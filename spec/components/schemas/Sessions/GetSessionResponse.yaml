@@ -2,7 +2,7 @@ properties:
   id:
     $ref: '#/components/schemas/SessionId'
   transaction_id:
-    description: Universally unique transaction identifier
+    description: The transaction identifier that needs to be provided when communicating directly with the ACS server
     type: string
     minLength: 36
     maxLength: 36
@@ -11,6 +11,14 @@ properties:
     $ref: '#/components/schemas/Amount'
   currency:
     $ref: '#/components/schemas/Currency'
+  completed:
+    type: bool
+    description: Indicates whether this session has been completed
+    example: false
+  authentication_type:
+    $ref: '#/components/schemas/AuthenticationType'
+  authentication_category:
+    $ref: '#/components/schemas/Category'
   status:
     $ref: '#/components/schemas/Status'
   approved:
@@ -26,8 +34,8 @@ properties:
     $ref: '#/components/schemas/ProtocolVersion'
   reference:
     $ref: '#/components/schemas/Reference'
-  next_action:
-    $ref: '#/components/schemas/NextAction'
+  next_actions:
+    $ref: '#/components/schemas/NextActions'
   ds:
     $ref: '#/components/schemas/Ds'
   acs:

@@ -1,0 +1,14 @@
+﻿type: object
+description: The source of the payment
+discriminator:
+  propertyName: type
+  mapping:
+    network_token: '#/components/schemas/05_PaymentRequestNetworkTokenSource'
+    card: '#/components/schemas/03_PaymentRequestCardSource'
+required:
+  - type
+properties:
+  type:
+    type: string
+    description: The payment source type
+    example: "card"

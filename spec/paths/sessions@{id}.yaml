@@ -11,6 +11,15 @@ get:
       required: true
       schema:
         type: string
+    - name: channel
+      in: header
+      description: Optionally provide the type of channnel so you only get the relevant actions
+      schema:
+        type: string
+        enum: 
+          - browser
+          - mobile
+        example: browser
   responses:
     '200':
       description: Session retrieved successfully

@@ -2,23 +2,17 @@ type: object
 description: The links related to the session
 properties:
   self:
-    type: object
-    properties:
-      href:
-        type: string
-        description: The URI of the session
-        example: https://api.checkout.com/sessions/sid_y3oqhf46pyzuxjbcn2giaqnb441
+    type: string
+    format: uri
+    description: The URI of the session
+    example: https://api.checkout.com/sessions/sid_y3oqhf46pyzuxjbcn2giaqnb441
   payment:
-    type: object
-    properties:
-      href:
-        type: string
-        description: The URI of the payment
-        example: https://api.checkout.com/payments/sid_y3oqhf46pyzuxjbcn2giaqnb441
+    type: string
+    format: uri
+    description: The URI of the payment
+    example: https://api.checkout.com/payments/sid_y3oqhf46pyzuxjbcn2giaqnb441
   issuer_fingerprint:
-    type: object
-    properties:
-      href:
-        type: string
-        description: The URI of the Issuer FingerPrint (3DS Method)
-        example: https://api.hbsc.com/3dsmethod?tx=123456
+    type: string
+    format: uri
+    description: The URI of the Issuer FingerPrint (3DS Method)
+    example: https://api.hbsc.com/3dsmethod?tx=123456
