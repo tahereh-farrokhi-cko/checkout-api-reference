@@ -5,3 +5,4 @@ items:
     - collect_channel_data
     - issuer_fingerprint
     - challenge_cardholder
+    - redirect_cardholder
