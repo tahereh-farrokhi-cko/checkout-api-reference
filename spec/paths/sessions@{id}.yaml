@@ -18,7 +18,7 @@ get:
         type: string
         enum: 
           - browser
-          - mobile
+          - app
         example: browser
   responses:
     '200':
