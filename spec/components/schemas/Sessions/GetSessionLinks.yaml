@@ -6,11 +6,6 @@ properties:
     format: uri
     description: The URI of the session
     example: https://api.checkout.com/sessions/sid_y3oqhf46pyzuxjbcn2giaqnb441
-  payment:
-    type: string
-    format: uri
-    description: The URI of the payment
-    example: https://api.checkout.com/payments/sid_y3oqhf46pyzuxjbcn2giaqnb441
   issuer_fingerprint:
     type: string
     format: uri
