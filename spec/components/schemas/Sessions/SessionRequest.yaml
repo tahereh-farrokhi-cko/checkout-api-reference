@@ -5,7 +5,7 @@ required:
   - completion
 properties:
   source:
-    $ref: '#/components/schemas/CardSessionSource'
+    $ref: '#/components/schemas/SessionSource'
   amount:
     type: integer
     description: |
@@ -30,6 +30,8 @@ properties:
     $ref: '#/components/schemas/Reference'
   transaction_type:
       $ref: '#/components/schemas/TransactionType'
+  shiiping_address:
+      $ref: '#/components/schemas/Address'
   completion:
     $ref: '#/components/schemas/CompletionInfo'
   channel_data:
