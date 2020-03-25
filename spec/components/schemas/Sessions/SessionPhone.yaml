@@ -1,0 +1,14 @@
+type: object
+description: A phone number
+properties:
+    cc:
+      description: Country code
+      type: string
+      minLength: 1
+      maxLength: 3
+      example: 234
+    subscriber:
+      type: string
+      description: The rest of the number
+      maxLength: 15
+      example: "0204567895"
