@@ -1,0 +1,48 @@
+post:
+  summary: Add a third-party entity
+  tags: 
+    - Marketplace
+  description: Onboard a third-party entity onto Checkout.com's payment platform.
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: "#/components/schemas/EntityRequest"
+  responses:
+    "201":
+      description: Created
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: "#/components/schemas/EntityResponse"
+      headers:
+        Cko-Request-Id:
+          $ref: "#/components/headers/Cko-Request-Id"
+        Cko-Version:
+          $ref: "#/components/headers/Cko-Version"
+    "400":
+      description: Bad request
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: "#/components/schemas/Errors"
+      example:
+        error_codes: "legal_name_missing"
+    "401":
+      description: Unauthorized
+    "422":
+      description: Unprocessable entity
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: "#/components/schemas/Errors"
+      example:
+        error_codes: "legal_name_invalid"
+    "500":
+      description: Internal server error
+    
