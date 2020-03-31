@@ -58,7 +58,7 @@ post:
               description: "Access key ID"
             client_secret:
               type: string
-              description: "Checkout's Accesskey Secret"
+              description: "Access key secret"
         examples:
           example-1:
             value:
