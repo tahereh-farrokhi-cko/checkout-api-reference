@@ -1,8 +1,7 @@
 type: oauth2
 description: |
   For server-to-server communication, we support the OAuth 2.0 client credentials flow.
-  To authenticate you will be provided a set of Accesskey credentials: An Accesskey ID and an Accesskey secret. 
-  You can then request an access token via the token URL below. 
+  We will provide you with a set of access key credentials – an access key ID and an access key secret – which you can exchange for an access token by calling the 'request an access token' endpoint below. 
   You will need to authenticate using basic authentication, using your access key ID and access key secret as your username and password:
 
   ```
