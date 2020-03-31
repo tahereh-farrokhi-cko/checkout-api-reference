@@ -3,7 +3,7 @@ description: |
   For server-to-server communication, we support the OAuth 2.0 client credentials flow.
   To authenticate you will be provided a set of Accesskey credentials: An Accesskey ID and an Accesskey secret. 
   You can then request an access token via the token URL below. 
-  You must authenticate using Basic authentication providing you Accesskey ID and Secret as username and password respectively:
+  You will need to authenticate using basic authentication, using your access key ID and access key secret as your username and password:
 
   ```
   curl --location --request POST 'https://access.checkout.com/connect/token' \
