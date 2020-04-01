@@ -49,6 +49,4 @@ post:
               - $ref: "#/components/schemas/Errors"
       example:
         error_codes: "legal_name_invalid"
-    "500":
-      description: Internal server error
     
