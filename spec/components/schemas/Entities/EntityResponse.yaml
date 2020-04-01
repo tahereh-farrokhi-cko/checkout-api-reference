@@ -15,7 +15,7 @@ properties:
     properties:
       id:
         type: string
-        description: The unique identifier of the processing channel used to make payments on behalf of the third party entity
+        description: The unique identifier of the processing channel used to make payments on behalf of the third-party entity
         example: "mer_x5zm2po6kimubhlfitgt2mfwgi"
   due_diligence:
     type: object

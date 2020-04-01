@@ -108,12 +108,12 @@ properties:
       maxLength: 4
   billing_descriptor:
     type: object
-    description: "The default text that is displayed on the customer's card statement identifying a purchase from a 3rd party entity's website. This descriptor can be overriden in a payment request."
+    description: "The default text that is displayed on the customer's card statement identifying a purchase from a third-party entity's website. This descriptor can be overriden in a payment request."
     nullable: false
     properties:
       name:
         type: string
-        description: "A description of charges related to this 3rd party entity"
+        description: "A description of charges related to this third-party entity"
         nullable: false
         example: T-S
         maxLength: 25
