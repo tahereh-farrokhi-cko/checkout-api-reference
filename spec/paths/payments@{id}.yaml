@@ -35,59 +35,59 @@ get:
     '404':
       description: Payment not found
 
-put:
-  tags:
-    - Payments
-  summary: Update payment details
-  description: |
-    Updates the details of the payment with the specified identifier string.
-    Currently only the `amount` can be updated for pending 3DS payments.
-  parameters:
-    - in: path
-      name: id
-      schema:
-        type: string
-        pattern: "^(pay|sid)_(\\w{26})$"
-      required: true
-      description: The payment or payment session identifier
-  requestBody:
-    content:
-      application/json:
-        schema:
-          type: object
-          properties:
-            amount:
-              type: integer
-              description: |
-                The payment amount in the major currency.
-                Omit the amount or provide a value of 0 to perform a card verification
-              minimum: 0
-              example: 6540
-  responses:
-    '200':
-      description: Payment updated successfully
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/Payment'
-      headers:
-        Cko-Request-Id:
-          $ref: "#/components/headers/Cko-Request-Id"
-        Cko-Version:
-          $ref: "#/components/headers/Cko-Version"
-    '401':
-      description: Unauthorized
-    '422':
-      description: Invalid data was sent
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/ValidationError'
-    '403':
-      description: Unable to update payment
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/ErrorResponse'
-    '404':
-      description: Payment not found
+# put:
+#   tags:
+#     - Payments
+#   summary: Update payment details
+#   description: |
+#     Updates the details of the payment with the specified identifier string.
+#     Currently only the `amount` can be updated for pending 3DS payments.
+#   parameters:
+#     - in: path
+#       name: id
+#       schema:
+#         type: string
+#         pattern: "^(pay|sid)_(\\w{26})$"
+#       required: true
+#       description: The payment or payment session identifier
+#   requestBody:
+#     content:
+#       application/json:
+#         schema:
+#           type: object
+#           properties:
+#             amount:
+#               type: integer
+#               description: |
+#                 The payment amount in the major currency.
+#                 Omit the amount or provide a value of 0 to perform a card verification
+#               minimum: 0
+#               example: 6540
+#   responses:
+#     '200':
+#       description: Payment updated successfully
+#       content:
+#         application/json:
+#           schema:
+#             $ref: '#/components/schemas/Payment'
+#       headers:
+#         Cko-Request-Id:
+#           $ref: "#/components/headers/Cko-Request-Id"
+#         Cko-Version:
+#           $ref: "#/components/headers/Cko-Version"
+#     '401':
+#       description: Unauthorized
+#     '422':
+#       description: Invalid data was sent
+#       content:
+#         application/json:
+#           schema:
+#             $ref: '#/components/schemas/ValidationError'
+#     '403':
+#       description: Unable to update payment
+#       content:
+#         application/json:
+#           schema:
+#             $ref: '#/components/schemas/ErrorResponse'
+#     '404':
+#       description: Payment not found

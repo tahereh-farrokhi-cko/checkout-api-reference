@@ -2,6 +2,7 @@ type: object
 required:
   - currency
   - source
+  - processing_channel_id
   - completion
 properties:
   source:
@@ -21,6 +22,10 @@ properties:
     example: USD
     maxLength: 3
     minLength: 3
+  processing_channel_id:
+    type: string
+    description: |
+      The processing channel to be used for the session
   authentication_type:
     $ref: '#/components/schemas/AuthenticationType'
   authentication_category:
