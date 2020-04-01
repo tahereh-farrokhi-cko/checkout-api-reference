@@ -85,7 +85,7 @@ properties:
   principal_address:
     description: "The company's principal place of business. This the primary location where its business is performed"
     allOf:
-      - $ref: "#/components/schemas/Address"
+      - $ref: "#/components/schemas/EntityAddress"
     required:
       - address_line1
       - city
