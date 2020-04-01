@@ -1,0 +1,23 @@
+type: object
+properties:
+  request_id:
+    type: string
+    nullable: false
+    description: "The request ID used by Checkout.com to trace what went wrong"
+    example: "215e771b-d43a-4b33-a2bf-196fdf0523fa"
+  error_type:
+    type: string
+    nullable: false
+    description: "The type of error"
+    example: "request_invalid"
+  error_codes:
+    type: array
+    nullable: false
+    description: "An array of validation errors"
+    items:
+      type: string
+      nullable: false
+      example: "error_code"
+example:
+  request_id: "215e771b-d43a-4b33-a2bf-196fdf0523fa"
+  error_type: "request_invalid"

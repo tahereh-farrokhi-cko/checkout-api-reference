@@ -1,0 +1,42 @@
+type: object
+readOnly: true
+properties:
+  legal_name:
+    type: string
+    description: The legal name of the third-party entity
+    example: "T-S Inc"
+  entity_id:
+    type: string
+    description: The unique identifier of the third-party entity
+    example: "ent_wxglze3wwywujg4nna5fb7ldli"
+  processing_channel:
+    type: object
+    description: Information regarding the payment processing channel for the third-party entity
+    properties:
+      id:
+        type: string
+        description: The unique identifier of the processing channel used to make payments on behalf of the third-party entity
+        example: "mer_x5zm2po6kimubhlfitgt2mfwgi"
+  due_diligence:
+    type: object
+    description: Information regarding due diligence checks being performed for the third-party entity. The keys of this JSON object are the names of the checks
+    properties:
+      vmss:
+        type: object
+        properties:
+          status:
+            type: string
+            description: The status of the check
+            example: pending
+  _links:
+    type: object
+    properties:
+      self:
+        type: object
+        properties:    
+          href:
+            type: string
+            example: "/entities/ent_wxglze3wwywujg4nna5fb7ldli"
+        method: 
+          type: string
+          example: "GET"
