@@ -68,7 +68,7 @@ properties:
           required:
             - national_id
         phone:
-          $ref: "#/components/schemas/PhoneNumber"
+          $ref: "#/components/schemas/EntityPhoneNumber"
         is_sole_proprietor:
           type: boolean
           nullable: false
@@ -81,7 +81,7 @@ properties:
       - principal_identification
       - phone
   phone:
-    $ref: "#/components/schemas/PhoneNumber"
+    $ref: "#/components/schemas/EntityPhoneNumber"
   principal_address:
     description: "The company's principal place of business. This the primary location where its business is performed"
     allOf:
