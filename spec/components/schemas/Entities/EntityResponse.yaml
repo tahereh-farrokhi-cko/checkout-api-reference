@@ -1,6 +1,5 @@
 type: object
 readOnly: true
-description: File uploaded successfully
 properties:
   legal_name:
     type: string
@@ -22,10 +21,13 @@ properties:
     type: object
     description: Information regarding due diligence checks being performed for the third-party entity. The keys of this JSON object are the names of the checks
     properties:
-      status:
-        type: string
-        description: "The status of the check"
-        example: "pending"
+      vmss:
+        type: object
+        properties:
+          status:
+            type: string
+            description: The status of the check
+            example: pending
   _links:
     type: object
     properties:
