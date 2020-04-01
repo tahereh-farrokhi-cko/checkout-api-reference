@@ -9,6 +9,9 @@ post:
       application/json:
         schema:
           $ref: "#/components/schemas/EntityRequest"
+  security: 
+    - OAuth: 
+      - gateway
   responses:
     "201":
       description: Created
