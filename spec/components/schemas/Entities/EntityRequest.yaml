@@ -1,3 +1,6 @@
+security: 
+  - OAuth: 
+      - gateway
 type: object
 properties:
   legal_name:
@@ -106,26 +109,6 @@ properties:
       nullable: false
       example: 5069
       maxLength: 4
-  billing_descriptor:
-    type: object
-    description: "The default text that is displayed on the customer's card statement identifying a purchase from a third-party entity's website. This descriptor can be overriden in a payment request"
-    nullable: false
-    properties:
-      name:
-        type: string
-        description: "A description of charges related to this third-party entity"
-        nullable: false
-        example: "Checkout.com"
-        maxLength: 255
-      city:
-        type: string
-        description: "The city from which charges will originate"
-        nullable: false
-        example: "London"
-        maxLength: 255
-    required:
-      - name
-      - city
 required:
   - legal_name
   - trading_name
@@ -134,5 +117,3 @@ required:
   - phone
   - principal_address
   - registered_address
-  - mccs
-  - billing_descriptor

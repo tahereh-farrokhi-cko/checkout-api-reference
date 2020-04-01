@@ -21,16 +21,11 @@ properties:
   due_diligence:
     type: object
     description: Information regarding due diligence checks being performed for the third-party entity. The keys of this JSON object are the names of the checks
-    additionalProperties:
-      type: object
-      properties:
-        status:
-          type: string
-          description: "The status of the check"
-          example: "pending"
-    example: 
-      id: css_rbhwd2qrg13uhrp2newf
-      status: "pending"
+    properties:
+      status:
+        type: string
+        description: "The status of the check"
+        example: "pending"
   _links:
     type: object
     properties:

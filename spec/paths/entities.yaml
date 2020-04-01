@@ -2,7 +2,7 @@ post:
   summary: Add a third-party entity
   tags: 
     - Marketplace
-  description: Onboard a third-party entity onto Checkout.com's payment platform.
+  description: Create and manage a third-party entity
   requestBody:
     required: true
     content:

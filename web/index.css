@@ -121,6 +121,11 @@ td.sc-kgoBCf.kGwPhO {
   background: white!important;
 }
 
+/* Hide array formatting */
+.sc-hMqMXs.dDdNtD, .sc-kEYyzF.cMefLx {
+  display: none
+}
+
 /* Field names */
 
 td.sc-cSHVUG.sc-chPdSV {
