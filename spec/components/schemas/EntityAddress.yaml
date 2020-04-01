@@ -1,0 +1,38 @@
+type: object
+properties:
+  line1:
+    type: string
+    description: "The first line of the address"
+    nullable: false
+    example: 54 Elisabeth Street
+    maxLength: 255
+  line2:
+    type: string
+    description: "The second line of the address"
+    nullable: false
+    maxLength: 255
+  city:
+    type: string
+    description: "The city of the address"
+    nullable: false
+    example: Brighton
+    maxLength: 255
+  state:
+    type: string
+    description: "The state, county, or municipality of the address"
+    nullable: false
+    example: West Sussex
+    maxLength: 255
+  postal_code:
+    type: string
+    description: "The postcode or zip code of the address"
+    nullable: false
+    example: W1B 1DY
+    maxLength: 10
+  country:
+    type: string
+    description: The ISO 3166-1 alpha-3 country code
+    example: GBR
+    nullable: false
+    pattern: '[a-zA-Z]{3}'
+    format: ISO 3166-1

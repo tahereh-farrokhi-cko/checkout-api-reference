@@ -2,7 +2,7 @@ post:
   summary: Add a third-party entity
   tags: 
     - Marketplace
-  description: Create and manage a third-party entity
+  description: Create and manage a third-party entity.
   requestBody:
     required: true
     content:
