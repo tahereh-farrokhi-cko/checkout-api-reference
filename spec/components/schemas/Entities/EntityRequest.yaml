@@ -19,12 +19,12 @@ properties:
     type: array
     description: "A collection of URLs owned by a third-party entity"
     nullable: false
-  items:
-    type: string
-    description: "A URL owned by a third-party entity"
-    nullable: false
-    example: "https://exampleaddress.com"
-    maxLength: 300
+    items:
+      type: string
+      description: "A URL owned by a third-party entity"
+      nullable: false
+      example: "https://exampleaddress.com"
+      maxLength: 300
   ultimate_beneficiary_owners:
     type: array
     description: "A third-party entity's ultimate beneficiary owners (UBOs), generally with a share greater than or equal to 25%"
