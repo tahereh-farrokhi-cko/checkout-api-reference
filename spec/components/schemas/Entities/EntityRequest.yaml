@@ -75,7 +75,7 @@ properties:
         - first_name
         - last_name
         - address
-        - principal_identification
+        - identification
         - phone
   phone:
     $ref: "#/components/schemas/EntityPhoneNumber"
@@ -86,7 +86,7 @@ properties:
       - required:
         - address_line1
         - city
-        - zip
+        - postal_code
         - country
   registered_address:
     description: "The official company address. This is the invoice address of the company, as it appears on statements and invoices. It can be the same as the principal address"
@@ -95,7 +95,7 @@ properties:
       - required:
         - address_line1
         - city
-        - zip
+        - postal_code
         - country
   mccs:
     type: array
