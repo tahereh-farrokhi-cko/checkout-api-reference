@@ -83,20 +83,20 @@ properties:
     description: "The company's principal place of business. This the primary location where its business is performed"
     allOf:
       - $ref: "#/components/schemas/EntityAddress"
-    required:
-      - address_line1
-      - city
-      - zip
-      - country
+      - required:
+        - address_line1
+        - city
+        - zip
+        - country
   registered_address:
     description: "The official company address. This is the invoice address of the company, as it appears on statements and invoices. It can be the same as the principal address"
     allOf:
       - $ref: "#/components/schemas/EntityAddress"
-    required:
-      - address_line1
-      - city
-      - zip
-      - country
+      - required:
+        - address_line1
+        - city
+        - zip
+        - country
   mccs:
     type: array
     description: "The Merchant Category Codes (MCCs) under which this third-party entity processes payments"
