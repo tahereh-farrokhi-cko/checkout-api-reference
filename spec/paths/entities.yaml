@@ -37,10 +37,10 @@ post:
             allOf:
               - $ref: "#/components/schemas/ValidationErrors"
               - example:
-                request_id: "215e771b-d43a-4b33-a2bf-196fdf0523fa"
-                error_type: "request_invalid"
-                error_codes:
-                  - legal_name_missing
+                  request_id: "215e771b-d43a-4b33-a2bf-196fdf0523fa"
+                  error_type: "request_invalid"
+                  error_codes:
+                    - legal_name_missing
     "401":
       description: Unauthorized
     "422":
@@ -51,8 +51,8 @@ post:
             allOf:
               - $ref: "#/components/schemas/ValidationErrors"
               - example:
-                request_id: "215e771b-d43a-4b33-a2bf-196fdf0523fa"
-                error_type: "request_invalid"
-                error_codes:
-                  - legal_name_invalid
+                  request_id: "215e771b-d43a-4b33-a2bf-196fdf0523fa"
+                  error_type: "request_invalid"
+                  error_codes:
+                    - legal_name_invalid
     
