@@ -1,12 +1,12 @@
 type: object
 properties:
-  line1:
+  address_line1:
     type: string
     description: "The first line of the address"
     nullable: false
     example: 54 Elisabeth Street
     maxLength: 255
-  line2:
+  address_line2:
     type: string
     description: "The second line of the address"
     nullable: false

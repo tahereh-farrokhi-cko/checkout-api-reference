@@ -35,9 +35,12 @@ post:
         application/json:
           schema:
             allOf:
-              - $ref: "#/components/schemas/Errors"
-      example:
-        error_codes: "legal_name_missing"
+              - $ref: "#/components/schemas/ValidationError"
+              - example:
+                  request_id: "215e771b-d43a-4b33-a2bf-196fdf0523fa"
+                  error_type: "request_invalid"
+                  error_codes:
+                    - legal_name_missing
     "401":
       description: Unauthorized
     "422":
@@ -46,7 +49,10 @@ post:
         application/json:
           schema:
             allOf:
-              - $ref: "#/components/schemas/Errors"
-      example:
-        error_codes: "legal_name_invalid"
+              - $ref: "#/components/schemas/ValidationError"
+              - example:
+                  request_id: "215e771b-d43a-4b33-a2bf-196fdf0523fa"
+                  error_type: "request_invalid"
+                  error_codes:
+                    - legal_name_invalid
     
