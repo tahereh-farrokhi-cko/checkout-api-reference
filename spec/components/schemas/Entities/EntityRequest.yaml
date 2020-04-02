@@ -71,12 +71,12 @@ properties:
           nullable: false
           default: false
           description: "Indicates if this UBO is the sole proprietor of the company. Defaults to false"
-    required:
-      - first_name
-      - last_name
-      - address
-      - principal_identification
-      - phone
+      required:
+        - first_name
+        - last_name
+        - address
+        - principal_identification
+        - phone
   phone:
     $ref: "#/components/schemas/EntityPhoneNumber"
   principal_address:
