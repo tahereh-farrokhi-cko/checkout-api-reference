@@ -1,8 +1,8 @@
 required:
-  - threeDsMethodCompletion
+  - three_ds_method_completion
 description: The result of the 3DS method url
 properties:
-  threeDsMethodCompletion:
+  three_ds_method_completion:
     type: string
     enum: 
       - Y
@@ -14,5 +14,5 @@ properties:
     maxLength: 1
     example: Y
 example: 
-  threeDsMethodCompletion: Y
+  three_ds_method_completion: Y
   

@@ -46,4 +46,4 @@ properties:
   eci:
     $ref: '#/components/schemas/Eci'
   _links:
-    $ref: '#/components/schemas/GetBaseSessionLinks'
+    $ref: '#/components/schemas/GetCompleteSessionLinks'
