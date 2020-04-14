@@ -1,22 +1,16 @@
 type: object
 description: The links related to the session
+allOf:
+  - $ref: '#/components/schemas/GetBaseSessionLinks'
 properties:
-  self:
-    type: object
-    description: The URI of the session
-    properties:
-      href:
-        type: string
-        maxLength: 100
-        example: https://api.checkout.com/sessions/sid_y3oqhf46pyzuxjbcn2giaqnb441
   issuer_fingerprint:
     type: object
-    description: The URI of the Issuer FingerPrint (3DS Method)
+    description: The URI to send the 3ds method completion indicator to. Use this if device information was sent when requesting a session.
     properties:
       href:
         type: string
         maxLength: 100
-        example: https://api.hbsc.com/3dsmethod?tx=123456
+        example: https://api.checkout.com/sessions/sid_y3oqhf46pyzuxjbcn2giaqnb441/issuer-fingerprint
   collect_channel_data:
     type: object
     description: The URI to send device information to
@@ -25,3 +19,11 @@ properties:
         type: string
         maxLength: 100
         example: https://api.checkout.com/sessions/sid_y3oqhf46pyzuxjbcn2giaqnb441/collect-data
+  three_ds_method_url:
+    type: object
+    description: The URI of the Issuer FingerPrint (3DS Method)
+    properties:
+      href:
+        type: string
+        maxLength: 100
+        example: https://api.hbsc.com/3dsmethod?tx=123456
