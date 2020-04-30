@@ -12,3 +12,8 @@ properties:
     minLength: 36
     maxLength: 36
     example: 9aea641d-0549-4222-9ca9-d90b43a4f38c
+  encryption_keys:
+    description: Key used to encrypt device data. This is returned only if the channel is set to "app" and the next action is "collect-data".
+    type: array
+    items:
+      $ref: "#/components/schemas/SdkEncryptionKey"

@@ -1,0 +1,49 @@
+type: object
+discriminator:
+  propertyName: alg
+  mapping:
+    RSA-OAEP-256: '#/components/schemas/SdkRsaEncryptionKey'
+    ECDH-ES: '#/components/schemas/SdkEcEncryptionKey'
+required:
+  - alg
+  - enc
+  - kty
+  - directory_server_id
+  - kid
+properties:
+  alg:
+    type: string
+    description: Value that goes into the "alg" header when encrypting
+    enum: 
+      - RSA-OAEP-256
+      - ECDH-ES
+    minLength: 12
+    maxLength: 12
+    example: RSA-OAEP-256
+  enc:
+    type: string
+    description: Value that goes into the "enc" header when encrypting
+    enum: 
+      - A128GCM
+      - A128CBC-HS256
+    minLength: 13
+    maxLength: 13
+    example: A128GCM
+  kty: 
+    type: string
+    description: A scheme's public key used to encrypt device data.
+    minLength: 3
+    maxLength: 3
+    example: RSA
+  kid:
+    type: string
+    description: Key identifier
+    maxLength: 50
+    example: UUIDkeyidentifierforDS
+  directory_server_id:
+    type: string
+    description: Registered Application Provider Identifier (RID) that is unique to the Payment System. RIDs are defined by the ISO 7816-5 standard. |
+      The 3DS SDK encrypts the device information by using the DS public key. This key is identified based on the this value.
+    minLength: 10
+    maxLength: 10
+    example: F000000000

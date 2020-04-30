@@ -1,0 +1,25 @@
+allOf:
+  - $ref: "#/components/schemas/SdkEncryptionKey"
+  - type: object
+  - required:
+      - crv
+      - x
+      - y
+    properties:
+      crv:
+        type: string
+        description: Type of curve
+        maxLength: 12
+        example: P-256
+      x:
+        type: string
+        description: x coordinate on EC curve
+        minLength: 43
+        maxLength: 43
+        example: 2_v-MuNZccqwM7PXlakW9oHLP5XyrjMG1UVS8OxYrgA
+      y:
+        type: string
+        description: y coordinate on EC curve
+        minLength: 43
+        maxLength: 43
+        example: rm1ktLmFIsP2R0YyJGXtsCbaTUesUK31Xc04tHJRolc
