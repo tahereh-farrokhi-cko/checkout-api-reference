@@ -120,6 +120,8 @@ properties:
       - $ref: '#/components/schemas/IPAddress'
   recipient:
     $ref: '#/components/schemas/PaymentRecipient'
+  marketplace:
+    $ref: '#/components/schemas/MarketplaceData'
   processing:
     type: object
     description: Use the processing object to influence or override the data sent during card processing
