@@ -29,15 +29,9 @@ post:
     '400':
       description: Bad Request
       content:
-      application/json:
-        schema:
-          allOf:
-            - $ref: "#/components/schemas/ValidationError"
-            - example:
-                request_id: "215e771b-d43a-4b33-a2bf-196fdf0523fa"
-                error_type: "request_invalid"
-                error_codes:
-                  - legal_name_missing
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ValidationError'
     '401':
       description: Unauthorised - Bearer token is invalid or missing
       headers:
