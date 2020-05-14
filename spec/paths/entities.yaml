@@ -1,7 +1,4 @@
 /entities:
-  parameters:
-    - $ref: '#/components/parameters/Cko-Version'
-    - $ref: '#/components/parameters/Cko-Request-Id'
   post:
     description: |
       Create a sub-entity, so that 2 operations can occur:
@@ -15,6 +12,9 @@
         application/json:
           schema:
             $ref: '#/components/schemas/EntityCreateRequest'
+    security:
+      - OAuth:
+        - marketplace
     responses:
       '201':
         description: Created Response
@@ -24,9 +24,9 @@
               $ref: '#/components/schemas/EntityBasicResponse'
         headers:
           Cko-Version:
-            $ref: '#/components/parameters/Cko-Version'
+            $ref: '#/components/headers/Cko-Version'
           Cko-Request-Id:
-            $ref: '#/components/parameters/Cko-Request-Id'
+            $ref: '#/components/headers/Cko-Request-Id'
       '400':
         description: Bad Request
         content:
