@@ -52,7 +52,7 @@ properties:
       description: "A url owned by a sub-entity"
       minLength: 4
       maxLength: 300
-      example: "https://example.com"
+      example: "https://www.checkout.com"
   principal_address:
     type: object
     title: EntityAddress
