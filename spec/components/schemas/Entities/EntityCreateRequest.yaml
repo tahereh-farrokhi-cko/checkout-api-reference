@@ -5,13 +5,13 @@ properties:
     description: "The legal name of the sub-entity"
     minLength: 4
     maxLength: 300
-    example: T-S
+    example: T-Shirts
   trading_name:
     type: string
     description: "The sub-entity's trading (doing business as) name"
     minLength: 4
     maxLength: 300
-    example: T-Shirts
+    example: T-S
   custom_id:
     type: string
     description: "The sub-entity's custom id. This is a consumer's own id that they can use to identify the sub-entity"

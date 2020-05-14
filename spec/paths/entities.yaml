@@ -10,29 +10,29 @@ post:
     content:
       application/json:
         schema:
-          $ref: '#/components/schemas/EntityCreateRequest'
+          $ref: "#/components/schemas/EntityCreateRequest"
   security:
     - OAuth:
       - marketplace
   responses:
-    '201':
+    "201":
       description: Created Response
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/EntityBasicResponse'
+            $ref: "#/components/schemas/EntityBasicResponse"
       headers:
         Cko-Version:
-          $ref: '#/components/headers/Cko-Version'
+          $ref: "#/components/headers/Cko-Version"
         Cko-Request-Id:
-          $ref: '#/components/headers/Cko-Request-Id'
-    '400':
+          $ref: "#/components/headers/Cko-Request-Id"
+    "400":
       description: Bad Request
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/ValidationError'
-    '401':
+            $ref: "#/components/schemas/ValidationError"
+    "401":
       description: Unauthorised - Bearer token is invalid or missing
       headers:
         WWW_Authenticate:
@@ -40,4 +40,3 @@ post:
             type: string
   tags:
     - Marketplace
-  
