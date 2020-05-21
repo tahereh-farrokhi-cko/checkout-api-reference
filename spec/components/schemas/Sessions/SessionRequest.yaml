@@ -26,6 +26,8 @@ properties:
     type: string
     description: |
       The processing channel to be used for the session
+  marketplace:
+    $ref: '#/components/schemas/MarketplaceData'
   authentication_type:
     $ref: '#/components/schemas/AuthenticationType'
   authentication_category:
