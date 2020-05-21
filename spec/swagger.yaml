@@ -16,23 +16,22 @@ info:
   termsOfService: 'https://checkout.com/terms/'
   description: >
     # Introduction
-
+    
     Checkout.com provides a collection of APIs that enable you to process and manage payments.  
     
-
     Our APIs accept and return JSON in the HTTP body and return HTTP response codes to indicate errors. You can consume the APIs directly using your favorite HTTP/REST library or make use of one of our <a href="https://docs.checkout.com/docs/sdks" target="_blank">SDKs</a>.  
+    
 
-
-    Our unified payments API allows you to accept payments from cards, digital wallets and the most popular alternative payment methods, as well as pay out to a variety of destinations, all using the same integration.
-
-
-    And with our webhook management, events and disputes APIs, you can keep on top of your transactions and react to any chargebacks, keeping your business running smoothly.
-
+    Our unified payments API allows you to accept payments from cards, digital wallets and the most popular alternative payment methods, as well as pay out to a variety of destinations, all using the same integration. 
+    
+    
+    And with our webhook management, events and disputes APIs, you can keep on top of your transactions and react to any chargebacks, keeping your business running smoothly. 
+    
     # Authentication
-
-    When you sign up for an account, you are given a secret and public API key pair for API key authentication, or an access key ID and secret access key for OAuth 2.0. 
-    You authenticate with our API by following the appropriate authentication flow, using either your API keys or your access key credentials.
-
+    
+    When you sign up for an account, you are given a secret and public API key pair for API key authentication, or an access key ID and secret for OAuth 2.0.  
+    You authenticate with our API by following the appropriate authentication flow, using either your API keys or your access key credentials.  
+    
 
     Never share your secret keys or access key credentials. Keep them guarded and secure.
 servers:
@@ -41,9 +40,7 @@ servers:
   - url: https://api.sandbox.checkout.com
     description: Sandbox API
 tags:
-  - name:  Access token
-    description: | 
-      
+  - name: Access
   - name: Payments
     description: Process and manage payments from a variety of sources and to various destinations all within one integration.
   - name: Sources
@@ -52,10 +49,12 @@ tags:
     description: Create a token that represents a card's details (or their tokenized form in a digital wallet) that you can later use to request a payment, without you having to process or store any sensitive information.
   - name: Instruments
     description: Create a payment instrument that you can later use as the source or destination for one or more payments.
-  - name: Webhooks
-    description: Create and manage the webhook notifications you receive to keep up to date with the status of your transactions.
-  - name: Events
-    description: Use events to monitor and get insights into your transactions.
+  - name: Forex
+    description: Checkout.com Foreign Exchange services
+  # - name: Webhooks
+  #   description: Create and manage the webhook notifications you receive to keep up to date with the status of your transactions.
+  # - name: Events
+  #   description: Use events to monitor and get insights into your transactions.
   - name: Disputes
     description: Keep track of and act on your open disputes (also known as chargebacks) to submit the best possible response.
   - name: Marketplace
@@ -63,14 +62,3 @@ tags:
   # - name: Files
   #   description: |
   #     Upload files to be used as input to other APIs
-# x-tagGroups:
-#   - name: Gateway
-#     tags:
-#       - Payments
-#       - Tokens
-#       - Sources
-#       - Files
-#   - name: Broadcast
-#     tags:
-#       - Events
-#       - Webhooks

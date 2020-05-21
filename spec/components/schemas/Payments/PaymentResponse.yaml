@@ -90,7 +90,7 @@ properties:
     type: object
     description: The customer associated with the payment, if provided in the request
     allOf:
-      - $ref: '#/components/schemas/PaymentResponseCustomer'
+      - $ref: '#/components/schemas/CustomerResponse'
   balances:
     type: object
     description: The payment balances

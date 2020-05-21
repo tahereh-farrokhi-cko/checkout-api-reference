@@ -5,18 +5,23 @@ required:
 properties:
   source:
     $ref: '#/components/schemas/PaymentRequestSource'
+  destination:
+    $ref: '#/components/schemas/PaymentRequestDestination'
   amount:
     type: integer
     description: |
-      The payment amount.
-      The exact format <a href="https://docs.checkout.com/docs/calculating-the-value" target="blank">depends on the currency</a>.
-      Omit the amount or provide a value of `0` to perform a card verification. 
+      The payment amount. If a `destination` is specified, indicates the payout amount.
+      Omit the amount or provide a value of `0` to perform a card verification.       
+
+      The amount must be provided in the <a href="https://docs.checkout.com/docs/calculating-the-value" target="blank">minor currency unit</a>.
     minimum: 0
     example: 6540
   currency:
     type: string
     description: |
       The three-letter <a href="https://docs.checkout.com/docs/currency-codes" target="blank">ISO currency code</a>
+
+      If a `destination` is specified, indicates the currency of the payout.
     example: USD
     maxLength: 3
     minLength: 3
@@ -57,25 +62,7 @@ properties:
     allOf:
       - $ref: '#/components/schemas/Timestamp'
   customer:
-    type: object
-    description: The customer's details
-    properties:
-      id:
-        type: string
-        pattern: "^(cus)_(\\w{26})$"
-        description: |
-          The identifier of an existing customer. If neither customer `id` nor `email` is provided, then 
-          a new customer will be registered
-        example: "cus_y3oqhf46pyzuxjbcn2giaqnb44"
-      email:
-        type: string
-        format: email
-        description: An optional email address to associate with the customer
-        example: "jokershere@gmail.com"
-      name:
-        type: string
-        description: The customer's name. This will only set the name for *new* customers
-        example: "Jack Napier"
+    $ref: '#/components/schemas/CustomerRequest'
   billing_descriptor:
     $ref: '#/components/schemas/BillingDescriptor'
   shipping:
@@ -118,24 +105,18 @@ properties:
     description: The IP address used to make the payment. Required for some risk checks
     allOf:
       - $ref: '#/components/schemas/IPAddress'
+  sender:
+    $ref: '#/components/schemas/PaymentSender'
   recipient:
     $ref: '#/components/schemas/PaymentRecipient'
   marketplace:
     $ref: '#/components/schemas/MarketplaceData'
+  instruction:
+    $ref: '#/components/schemas/PaymentInstruction'
   processing:
-    type: object
-    description: Use the processing object to influence or override the data sent during card processing
-    properties:
-      mid:
-        type: string
-        description: Overrides the default merchant/acceptor identifier (MID) configured on your account
-        example: "1234567"
-      aft:
-        type: boolean
-        description: Indicates whether the payment is an [Account Funding Transaction](https://docs.checkout.com/docs/account-funding-transactions) 
+    $ref: '#/components/schemas/ProcessingSettings'
   metadata:
     type: object
     description: Allows you to store additional information about a transaction with custom fields and up to five user-defined fields (`udf1` to `udf5`), which can be used for reporting purposes. `udf1` is also used for some of our risk rules.
     example:
       coupon_code: "NY2018"
-      partner_id: 123989

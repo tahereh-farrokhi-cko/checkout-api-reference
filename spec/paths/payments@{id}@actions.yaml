@@ -1,6 +1,11 @@
 get:
   tags:
     - Payments
+  security: 
+    - OAuth: 
+      - gateway
+      - gateway:payment-details
+    - ApiKey: []
   summary: Get payment actions
   description: |
     Returns all the actions associated with a payment ordered by processing date in descending order (latest first).
@@ -12,10 +17,6 @@ get:
         pattern: "^(pay)_(\\w{26})$"
       required: true
       description: The payment identifier
-  security: 
-    - OAuth: 
-      - gateway
-    - ApiKey: []
   responses:
     '200':
       description: Payment actions retrieved successfully

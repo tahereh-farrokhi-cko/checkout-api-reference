@@ -1,6 +1,11 @@
 post:
   tags:
     - Payments
+  security: 
+    - OAuth: 
+      - gateway
+      - gateway:payment-authorizations
+    - ApiKey: []
   summary: Increment authorization
   description: |
     Request an incremental authorization to increase the authorization amount or extend the authorization's validity period (Mastercard only).
@@ -13,10 +18,6 @@ post:
         pattern: "^(pay)_(\\w{26})$"
       required: true
       description: The payment identifier
-  security: 
-    - OAuth: 
-      - gateway
-    - ApiKey: []
   requestBody:
     content:
       application/json:

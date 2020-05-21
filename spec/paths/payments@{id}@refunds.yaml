@@ -1,6 +1,11 @@
 post:
   tags:
     - Payments
+  security: 
+    - OAuth: 
+      - gateway
+      - gateway:payment-refunds
+    - ApiKey: []
   summary: Refund a payment
   description: |
     Refunds a payment if supported by the payment method.
@@ -14,10 +19,6 @@ post:
         pattern: "^(pay)_(\\w{26})$"
       required: true
       description: The payment identifier
-  security: 
-    - OAuth: 
-      - gateway
-    - ApiKey: []
   requestBody:
     content:
       application/json:

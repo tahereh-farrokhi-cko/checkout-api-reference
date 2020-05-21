@@ -1,6 +1,11 @@
 get:
   tags:
     - Payments
+  security: 
+    - OAuth: 
+      - gateway
+      - gateway:payment-details
+    - ApiKey: []
   summary: Get payment details
   description: |
     Returns the details of the payment with the specified identifier string.
@@ -18,10 +23,6 @@ get:
         pattern: "^(pay|sid)_(\\w{26})$"
       required: true
       description: The payment or payment session identifier
-  security: 
-    - OAuth: 
-      - gateway
-    - ApiKey: []
   responses:
     '200':
       description: Payment retrieved successfully

@@ -6,7 +6,7 @@ servers:
 post:
   summary: Request an access token
   tags: 
-    - Access token
+    - Access
   responses:
     '200':
       description: OK - A successful access token response as per [RFC6749](https://tools.ietf.org/html/rfc6749#section-4.4.3)
@@ -59,10 +59,13 @@ post:
             client_secret:
               type: string
               description: "Access key secret"
+            scope:
+              type: string
+              description: The access key scope
+              example: gateway
         examples:
           example-1:
             value:
               grant_type: client_credentials
               client_id: ack_clckqmmnyfiupexjew7shh5ahe
               client_secret: Pmg36sDWQ9WxtPR3
-    
