@@ -1,4 +1,6 @@
- post:
+post:
+  security:
+    - ApiKey: []
   summary: Complete a session
   description: Completes a session by authorising the payment associated.
   tags:

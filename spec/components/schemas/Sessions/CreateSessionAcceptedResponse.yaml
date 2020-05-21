@@ -1,4 +1,6 @@
 properties:
+  session_secret:
+    $ref: '#/components/schemas/SessionSecret'
   id:
     $ref: '#/components/schemas/SessionId'
   transaction_id:

@@ -1,4 +1,6 @@
- put:
+put:
+  security:
+    - ApiKey: []
   summary: Update session 3ds method completion indicator
   description: Update session 3ds method completion indicator based on the result of accessing the 3ds method url.
   tags:

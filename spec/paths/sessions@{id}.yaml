@@ -1,6 +1,11 @@
 get:
   tags:
     - Sessions
+  security:
+    - OAuth:
+      - sessions:app
+      - sessions:browser
+    - ApiKey: []
   summary: Get session details
   description: |
     Returns the details of the session with the specified identifier string.

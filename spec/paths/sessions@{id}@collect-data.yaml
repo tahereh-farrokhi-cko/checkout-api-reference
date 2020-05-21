@@ -1,4 +1,6 @@
- put:
+put:
+  security:
+    - ApiKey: []
   summary: Update a session
   description: Update a session by providing information about the environment it was created.
   tags:

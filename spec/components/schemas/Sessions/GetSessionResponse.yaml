@@ -23,6 +23,8 @@ properties:
     $ref: '#/components/schemas/AuthenticationType'
   authentication_category:
     $ref: '#/components/schemas/Category'
+  certificates:
+    $ref: '#/components/schemas/DsPublicKeys'
   status:
     $ref: '#/components/schemas/Status'
   approved:
